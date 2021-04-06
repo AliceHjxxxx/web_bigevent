@@ -48,8 +48,9 @@ function getUserInfo() {
 
 function renderAvater(user) {
     var name = user.nickname || user.username;
+
     $('#welcome').html('欢迎&nbsp' + name);
-    if (user.user_pic !== null) {
+    if (user.user_pic !== "") {
         $('.layui-nav-img').attr('src', user.user_pic).show();
         $('.text-avatar').hide()
     } else {
